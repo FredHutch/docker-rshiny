@@ -1,6 +1,6 @@
 FROM rocker/shiny
 RUN R -e "install.packages(c(\
-    'RNifti', 'markdown' \
+    'RNifti', 'markdown', 'flexdashboard', 'tidyverse', 'plotly' \
     ), dependencies=TRUE,  repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages(c(\
     'shinythemes', 'shinyWidgets', 'BiocManager' \
