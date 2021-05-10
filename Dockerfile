@@ -27,4 +27,6 @@ RUN apt-get update && \
     R -e "install.packages(c('BiocManager'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
     R -e "library(BiocManager)" && \
     R -e "BiocManager::install('SingleCellExperiment')" && \
-    R -e "BiocManager::install('iSEE')"
+    R -e "BiocManager::install('iSEE')" && \
+    R -e "BiocManager::install('InteractiveComplexHeatmap')" && \
+    R -e "library(InteractiveComplexHeatmap)"
