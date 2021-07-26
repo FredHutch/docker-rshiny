@@ -9,8 +9,8 @@ RUN apt-get update && \
     R -e "install.packages(c('rversions'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
     R -e "install.packages(c('webdriver'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
     R -e "install.packages(c('googledrive'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
-    R -e "library(googledrive)" && \
-    R -e "install.packages(c('dplyr'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
+    R -e "library(googledrive)"
+RUN R -e "install.packages(c('dplyr'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
     R -e "library(dplyr)" && \
     R -e "install.packages(c('plyr'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
     R -e "library(plyr)" && \
@@ -27,8 +27,8 @@ RUN apt-get update && \
     R -e "install.packages(c('tidyverse'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
     R -e "library(tidyverse)" && \
     R -e "install.packages(c('plotly'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
-    R -e "library(plotly)" && \
-    R -e "install.packages(c('shinythemes'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
+    R -e "library(plotly)"
+RUN R -e "install.packages(c('shinythemes'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
     R -e "library(shinythemes)" && \
     R -e "install.packages(c('shinyWidgets'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
     R -e "library(shinyWidgets)" && \
