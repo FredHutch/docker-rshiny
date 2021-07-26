@@ -10,6 +10,14 @@ RUN apt-get update && \
     R -e "install.packages(c('webdriver'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
     R -e "install.packages(c('googledrive'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
     R -e "library(googledrive)" && \
+    R -e "install.packages(c('dplyr'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
+    R -e "library(dplyr)" && \
+    R -e "install.packages(c('plyr'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
+    R -e "library(plyr)" && \
+    R -e "install.packages(c('readr'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
+    R -e "library(readr)" && \
+    R -e "install.packages(c('Seurat'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
+    R -e "library(Seurat)" && \
     R -e "install.packages(c('googlesheets4'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
     R -e "install.packages(c('RNifti'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
     R -e "install.packages(c('markdown'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
