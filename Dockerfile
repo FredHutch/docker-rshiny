@@ -35,4 +35,12 @@ RUN R -e "install.packages(c('shinythemes'), dependencies=TRUE,  repos='http://c
     R -e "install.packages(c('BiocManager'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
     R -e "library(BiocManager)" && \
     R -e "BiocManager::install('SingleCellExperiment')" && \
-    R -e "BiocManager::install('iSEE')"
+    R -e "BiocManager::install('iSEE')" && \
+    R -e "BiocManager::install('DESeq2')" && \
+    R -e "library(DESeq2)" && \
+    R -e "BiocManager::install('edgeR')" && \
+    R -e "library(edgeR)" && \
+    R -e "install.packages(c('pheatmap'), dependencies = TRUE, repos='http://cran.rstudio.com/')" && \
+    R -e "library(pheatmap)" && \
+    R -e "install.packages(c('scales'), dependencies=TRUE,  repos='http://cran.rstudio.com/')" && \
+    R -e "library(scales)"
